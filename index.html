@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soduko</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Sudoku solver and validator</h1>
+    <h3>How it works ?</h3>
+    <div id="head">-Enter a sudoku that you solved and click on 'CHECK' to check if the solution is correct.<br>
+    -Or enter the digits of a sudoku that you want to solve and click on 'SOLVE' to get a solution.
+    </div>
+    <div id="answer">
+      <p id="correct">your sudoku is correct</p>
+      <p id="incorrect">your sudoku is incorrect</p>
+    </div>
+    <table id="sudoku">
+      <tr>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="topRight" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="right bottom" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="topRight" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="right bottom" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="top right" maxlength="1" /></td>
+        <td><input class="topLeft" maxlength="1" /></td>
+        <td><input class="top" maxlength="1" /></td>
+        <td><input class="topRight" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+        <td><input class="left" maxlength="1" /></td>
+        <td><input maxlength="1" /></td>
+        <td><input class="right" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            class="left bottom"
+            maxlength="
+                1"
+          />
+        </td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="bottom right" maxlength="1" /></td>
+        <td><input class="left bottom" maxlength="1" /></td>
+        <td><input class="bottom" maxlength="1" /></td>
+        <td><input class="right bottom" maxlength="1" /></td>
+      </tr>
+    </table>
+    <div id="button">
+      <button class="enter" id="enter">Check</button>
+      <button id="solve">solve</button>
+      <button id="clearcells">Clear cells</button>   
+    </div>
+    <p id="checkpara">This button will check if the sudoku entered in the table is correct or not.</p>
+    <p id="solvepara">Click on this button to solve the sudoku (you must enter valid numbers only).</p>
+    <p id="clearpara">Delete all the numbers written in the table.</p>
+    <script src="script.js"></script>
+  </body>
+</html>

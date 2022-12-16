@@ -1,0 +1,115 @@
+*{
+    background-color: #EAF3FA;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+ p{
+    display : none;
+    text-align: center;
+    font-weight: bold;
+} 
+#sudoku{
+    margin-top: 5px;
+}
+#head{
+    height:40px;
+    margin-bottom: 20px;
+}
+#answer{
+ height: 40px;
+}
+#correct, #incorrect{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #33a532;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    width: 180px;
+    height: 30px;
+    border: 1px solid #33a532;
+    margin-bottom: 0px;
+}
+#incorrect{
+    background-color: #bb1e10;
+    border: #bb1e10;
+    width: 200px;
+}
+
+td{
+ 
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+input{
+    border: 1px dotted black;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin: -0.7px;
+}
+.topLeft{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.topRight{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.top{
+    border-top: 1px solid black;
+}
+.left{
+    border-left: 1px solid black;
+}
+.right{
+    border-right: 1px solid black;
+}
+.bottom{
+    border-bottom: 1px solid black;
+}
+.bottomLeft{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+.bottomRight{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+input:focus{    
+    background-color: #BEDFFA;
+    outline: none;
+}
+
+#button{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+button{
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 90px;
+    height: 40px;
+    margin-left: 10px;
+}
+button:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #BEDFFA;
+} 
